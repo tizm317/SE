@@ -1,0 +1,28 @@
+Types of Requirements : Functional / Non-functional
+
+Functional : 기능적인, describe what a system must do, input&output -> Use case Diagram으로 표현됨
+Non-functional : 얼마나 잘 구현했는가, 성능기준, 예상data 양, 보안레벨, usability 포함 -> Requirements List로 표현됨
+
+Non-functional requirement는 과제 명세서에 나와 있는 내용을 기반으로 파악 가능한 것만 작성하면 됩니다. 
+즉,  보안, 성능, 법적인 내용, 구현/배포와 관련된 것(수치 포함)은 작성하지 않아도 됩니다.
+이번 과제는 functional requirement에 집중하는 것이므로 non-functional requirement 작성 여부에 대한 판단은 하지 않을 예정입니다.
+Functional requirement와 use case 모두 user 관점에서 표현하는 것이 맞습니다. 
+이때 user 관점이라는 의미는 시스템 내부의 기능이 아니라 user와의 직접적인 interaction(입출력)만 표현한다는 의미입니다. 
+다시 말해서, functional requirement는 "Describe what a system must do"이 맞고 user 입장에서 보이는 시스템의 기능만을 기술한다는 뜻입니다.
+
+No.	Requirement											Use Case(s)
+1	사용자는 의류 쇼핑 사이트 사용 권한을 얻기 위해서 회원 가입을 해야 한다.					회원가입
+	자신의 기본 정보(이름, 주민번호, 주소, 이메일 등)과 ID/Password를 입력해야한다.				Non-functional
+2	회원은 이 사이트에서 탈퇴할 수 있다.									회원탈퇴
+	탈퇴와 동시에 시스템의 사용 권한은 소멸된다.								Non-functional
+	단, 회원은 등록한 상품이 하나도 없는 상태에서 탈퇴할 수 있다.						Non-functional
+3	회원은 등록한 ID와 password로 사이트에 로그인해야 한다.						로그인
+	회원이 로그아웃하면 프로그램은 자동으로 종료된다.							로그아웃
+4	회원은 판매하려는 의류를 등록할 수 있다.								판매 의류 등록
+	등록 시 상품명, 제작회사명, 가격, 수량, 추가상품, 추가상품 가격, 판매 종료일 등의 정보를 입력해야 한다.		Non-functional
+	또한 각 회원은 자신이 등록한 판매 중인 의류 상품 리스트를 조회할 수 있고 					판매 의류 상품 리스트 조회
+	  특정 상품을 선택한 후에 그 상품에 대한 모든 항목을 수정하거나 삭제할 수 있다.				특정 상품 항목 수정 / 삭제			
+5	회원은 자신이 판매 완료한 의류 상품을 조회할 수 있다.							판매 완료된 상품 내역 조회
+	판매 완료한 상품은 판매종료일이 지났거나 남은 수량이 0이 된 상품을 의미한다.				Non-functional
+	이때 상품명의 오름차순으로 정렬해서 출력하며 
+	  각 상품에 대해 상품명, 제작회사명, 가격, 판매된 수량, 평균 구매만족도를 출력한다.				Non-functional
