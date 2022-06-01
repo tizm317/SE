@@ -1,0 +1,6 @@
+test hat testCompany 1000 10 0.000000
+test hattest test0 testCompany 1000 10 0.000000
+test test0
+test hat testCompany 1000 9 0.000000
+test test0 testCompany 1000 9 0.000000
+test hat, 3.000000
