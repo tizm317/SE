@@ -4,48 +4,40 @@ SearchProductUI::SearchProductUI()
 {
 }
 
-SearchProductUI::SearchProductUI(FILE* in_fp, FILE* out_fp, SearchProduct* searchProductptr, vector<Product*> productList)
+SearchProductUI::SearchProductUI(FILE *in_fp, FILE *out_fp, SearchProduct *searchProductptr, vector<Product *> productList)
 {
-	int temp = fscanf(in_fp, "%s", ProductName);
+	fscanf(in_fp, "%s", productName);
 
-	// �ٿ������ ��Ʈ��Ŭ������ ������ ����
 	this->searchProductptr = searchProductptr;
 
+	Product *productPointer = nullptr;
 
-	Product* ProductPointer = nullptr;
-
-	ProductPointer = this->InputProductName(productList);
+	productPointer = this->inputProductName(productList);
 	
-	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
+	fprintf(out_fp, "%s %s %s %d %d %f", productPointer->getSellerId().c_str(), productPointer->getProductName().c_str(), productPointer->getCompanyName().c_str(), productPointer->getCost(), productPointer->getCount(), productPointer->getAvgPurchaseSatisfaction());
 }
 
-Product* SearchProductUI::startInterface(FILE* in_fp, FILE* out_fp, SearchProduct* searchProductptr, vector<Product*> productList)
+Product* SearchProductUI::startInterface(FILE *in_fp, FILE *out_fp, SearchProduct *searchProductptr, vector<Product *> productList)
 {
-	int temp = fscanf(in_fp, "%s", ProductName);
+	fscanf(in_fp, "%s", productName);
 
-	// �ٿ������ ��Ʈ��Ŭ������ ������ ����
 	this->searchProductptr = searchProductptr;
 
+	Product* productPointer = nullptr;
 
-	Product* ProductPointer = nullptr;
-
-	ProductPointer = this->InputProductName(productList);
-
-	//ProductPointer->GetProductDetails();
+	productPointer = this->inputProductName(productList);
 
 	fprintf(out_fp, "4.1. Search Product\n");
-	fprintf(out_fp, "> %s %s %s %d %d %f\n", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
+	fprintf(out_fp, "> %s %s %s %d %d %f\n", productPointer->getSellerId().c_str(), productPointer->getProductName().c_str(), productPointer->getCompanyName().c_str(), productPointer->getCost(), productPointer->getCount(), productPointer->getAvgPurchaseSatisfaction());
 
-
-	return ProductPointer;
+	return productPointer;
 }
 
-Product* SearchProductUI::InputProductName(vector<Product*> productList)
+Product* SearchProductUI::inputProductName(vector<Product *> productList)
 {
-	Product* ProductPointer = nullptr;
+	Product* productPointer = nullptr;
 
-	ProductPointer = this->searchProductptr->ShowProductDetails(ProductName, productList);
+	productPointer = this->searchProductptr->showProductDetails(productName, productList);
 	
-	
-	return ProductPointer;
+	return productPointer;
 }

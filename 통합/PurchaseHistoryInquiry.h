@@ -6,7 +6,7 @@
 class PurchaseHistoryInquiry
 {
 public:
-	void startInterface(FILE* in_fp, FILE* out_fp, PurchaseHistory* purchaseHistory);
-	void showProductList(PurchaseHistory* purchaseHistory);
+	void startInterface(FILE *in_fp, FILE  *out_fp, PurchaseHistory *purchaseHistory);
+	void showProductList(PurchaseHistory *purchaseHistory);
 };
 

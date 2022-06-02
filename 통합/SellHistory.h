@@ -5,10 +5,9 @@
 class SellHistory
 {
 private:
-	vector<Product*> productList; // 아예 History에 Product 벡터를 넣어버림
+	vector<Product*> productList;
 public:
 	SellHistory();
 	void addSellHistory(Product *);
 	vector<Product *> listProducts();
-	int getLength();
 };

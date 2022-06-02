@@ -4,12 +4,13 @@
 #include "PurchaseSatisfactionEvaluation.h"
 
 class PurchaseSatisfactionEvaluation;
+
 class PurchaseSatisfactionEvaluationUI
 {
 private:
-	char ProductName[100];
-	int PurchaseSatisfaction;
+	char productName[100];
+	int purchaseSatisfaction;
 public:
-	PurchaseSatisfactionEvaluationUI(FILE* in_fp, FILE* out_fp, PurchaseHistory* purchaseHistory, PurchaseSatisfactionEvaluation* callerPtr);
+	PurchaseSatisfactionEvaluationUI(FILE *in_fp, FILE *out_fp, PurchaseHistory *purchaseHistory, PurchaseSatisfactionEvaluation *callerPtr);
 };
 

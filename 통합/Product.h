@@ -20,7 +20,7 @@ public:
 	Product(string productName, string companyName, int cost, int count);
 	Product *getProductDetails();
 	string getProductName();
-	string getSellerID();
+	string getSellerId();
 	string getCompanyName();
 	void reduceCount();
 	void getProducts();

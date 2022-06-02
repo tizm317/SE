@@ -1,27 +1,19 @@
 #include "PurchaseSatisfactionEvaluationUI.h"
 
-PurchaseSatisfactionEvaluationUI::PurchaseSatisfactionEvaluationUI(FILE* in_fp, FILE* out_fp, PurchaseHistory* purchaseHistory, PurchaseSatisfactionEvaluation* callerPtr)
+PurchaseSatisfactionEvaluationUI::PurchaseSatisfactionEvaluationUI(FILE *in_fp, FILE *out_fp, PurchaseHistory *purchaseHistory, PurchaseSatisfactionEvaluation *callerPtr)
 {
-	// ��ǰ�̸� �Է� ����
-	int temp = fscanf(in_fp, "%s", ProductName);
+	fscanf(in_fp, "%s", productName);
 
-	// ���� ���� �߿��� �ش� ��ǰ ã��
-	Product* ProductPointer = nullptr;
-	// �������� �Ѱ� ����
-	ProductPointer = callerPtr->SelectProduct(purchaseHistory, ProductName);
+	Product *ProductPointer = nullptr;
 
-	// ���� ������ �Է� ����
-	temp = fscanf(in_fp, "%d", &PurchaseSatisfaction);
+	ProductPointer = callerPtr->selectProduct(purchaseHistory, productName);
 
-
-	//ProductPointer = callerPtr->SelectProduct(purchaseHistory, ProductName); 
+	fscanf(in_fp, "%d", &purchaseSatisfaction);
 	
-	// ���� �������� �ش� ��ǰ�� ����
-	callerPtr->InputPurchaseSatisfactionScore(ProductPointer, PurchaseSatisfaction);
+	callerPtr->inputPurchaseSatisfactionScore(ProductPointer, purchaseSatisfaction);
 
-	// output.txt�� ���
 	fprintf(out_fp, "4.4. Purchase Satisfaction Evaluation\n");
-	fprintf(out_fp, "> %s %s %f\n", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getAvgPurchaseSatisfaction());
+	fprintf(out_fp, "> %s %s %f\n", ProductPointer->getSellerId().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getAvgPurchaseSatisfaction());
 }
 
 

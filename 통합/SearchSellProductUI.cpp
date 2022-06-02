@@ -4,7 +4,7 @@ SearchSellProductUI::SearchSellProductUI()
 {
 }
 
-void SearchSellProductUI::startInterface(FILE* out_fp, SearchSellProduct *searchSellProductPointer, SellHistory *sellProductList, vector<Product *> productList)
+void SearchSellProductUI::startInterface(FILE *out_fp, SearchSellProduct *searchSellProductPointer, SellHistory *sellProductList, vector<Product *> productList)
 {
 	this->searchSellProductPointer = searchSellProductPointer;
 

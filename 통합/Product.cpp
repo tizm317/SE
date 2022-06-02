@@ -90,7 +90,7 @@ Product* Product::getPointer()
 	return this;
 }
 
-string Product::getSellerID()
+string Product::getSellerId()
 {
 	return this->sellerId;
 }

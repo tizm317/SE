@@ -9,14 +9,13 @@ class SearchProduct;
 class SearchProductUI
 {
 private:
-	//string ProductName;
-	char ProductName[100];
+	char productName[100];
 	SearchProduct* searchProductptr;
 public:
 	SearchProductUI();
-	SearchProductUI(FILE* in_fp, FILE* out_fp, SearchProduct*, vector<Product*>);
-	Product* startInterface(FILE* in_fp, FILE* out_fp, SearchProduct*, vector<Product*>); // 이거로 바꾸자
-	Product* InputProductName(vector<Product*>);
+	SearchProductUI(FILE *in_fp, FILE *out_fp, SearchProduct *, vector<Product *>);
+	Product* startInterface(FILE *in_fp, FILE *out_fp, SearchProduct *, vector<Product *>);
+	Product* inputProductName(vector<Product *>);
 };
 
 

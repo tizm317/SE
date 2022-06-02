@@ -4,17 +4,17 @@ PurchaseHistory::PurchaseHistory()
 {
 }
 
-void PurchaseHistory::AddPurchaseHistory(Product* selectedProduct)
+void PurchaseHistory::addPurchaseHistory(Product* selectedProduct)
 {
 	productList.push_back(selectedProduct);
 }
 
-vector<Product*> PurchaseHistory::ListProducts()
+vector<Product*> PurchaseHistory::listProducts()
 {
 	return this->productList;
 }
 
-bool PurchaseHistory::CheckAlreadyPurchased(Product* selectedProduct)
+bool PurchaseHistory::checkAlreadyPurchased(Product* selectedProduct)
 {
 	bool isAlreadyPurchased = false;
 

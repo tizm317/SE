@@ -6,9 +6,9 @@
 class PurchaseProduct
 {
 private:
-	bool IsAlreadyPurchased;
+	bool isAlreadyPurchased;
 public:
-	void ShowPurchaseResult(PurchaseHistory*, Product*);
-	void startInterface(FILE*, PurchaseHistory* , Product* );
+	void showPurchaseResult(PurchaseHistory *, Product *);
+	void startInterface(FILE *, PurchaseHistory *, Product *);
 };
 

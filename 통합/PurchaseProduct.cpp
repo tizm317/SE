@@ -1,27 +1,22 @@
 #include "PurchaseProduct.h"
 
-void PurchaseProduct::ShowPurchaseResult(PurchaseHistory* purchaseHistory, Product* selectedProduct)
+void PurchaseProduct::showPurchaseResult(PurchaseHistory *purchaseHistory, Product *selectedProduct)
 {
-	if (purchaseHistory->ListProducts().size() == 0)
+	if (purchaseHistory->listProducts().size() == 0)
 	{
-		IsAlreadyPurchased = false;
+		isAlreadyPurchased = false;
 	}
 	else
 	{
-		IsAlreadyPurchased = (*purchaseHistory).CheckAlreadyPurchased(selectedProduct);
+		isAlreadyPurchased = (*purchaseHistory).checkAlreadyPurchased(selectedProduct);
 	}
 
-
-	// �̹� ������ �� ������ ���� x
-	if (IsAlreadyPurchased)
+	if (isAlreadyPurchased)
 		return;
 
-	// ����
-	// ���� �ϳ� ���̰�
 	selectedProduct->reduceCount();
 
-	// ���� ��Ͽ� �߰�
-	(*purchaseHistory).AddPurchaseHistory(selectedProduct);
+	(*purchaseHistory).addPurchaseHistory(selectedProduct);
 
 	return;
 }
@@ -29,5 +24,5 @@ void PurchaseProduct::ShowPurchaseResult(PurchaseHistory* purchaseHistory, Produ
 void PurchaseProduct::startInterface(FILE* out_fp, PurchaseHistory* purchaseHistory, Product* selectedProduct)
 {
 	BuyProductUI buyProductUI;
-	buyProductUI.ClickPurchaseButton(out_fp, purchaseHistory, selectedProduct);
+	buyProductUI.clickPurchaseButton(out_fp, purchaseHistory, selectedProduct);
 }

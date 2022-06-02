@@ -3,7 +3,6 @@
 
 SearchSellProduct::SearchSellProduct()
 {
-    
 }
 
 void SearchSellProduct::startInterface(FILE *out_fp, SellHistory *sellProductList, vector<Product *> productList)
@@ -16,12 +15,12 @@ vector<Product *> SearchSellProduct::showSellProductList(SellHistory *sellHistor
 {
     vector<Product *> sellProductListPointer;
     
-    vector<Product *> sellProductList = sellHistory->listProducts(); // sellHistory에서 다 접근함
+    vector<Product *> sellProductList = sellHistory->listProducts();
     for(auto& itr : sellProductList)
     {   
         if(itr->getCount() != 0)
         {
-            Product *selectedProduct = itr->getProductDetails(); // 해당 product 정보 통째로 반환
+            Product *selectedProduct = itr->getProductDetails();
             sellProductListPointer.push_back(selectedProduct);
         }    
     }

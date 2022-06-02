@@ -8,8 +8,8 @@ private:
 	vector<Product*> productList;
 public:
 	PurchaseHistory();
-	void AddPurchaseHistory(Product*);
-	vector<Product*> ListProducts();
-	bool CheckAlreadyPurchased(Product*);
+	void addPurchaseHistory(Product*);
+	vector<Product*> listProducts();
+	bool checkAlreadyPurchased(Product*);
 };
 

@@ -13,6 +13,6 @@ private:
 	SearchSoldOutProduct* searchSoldOutProductPointer;
 public:
 	SearchSoldOutProductUI();
-	void startInterface(FILE* out_fp, SearchSoldOutProduct *, SellHistory *, vector<Product *>);
+	void startInterface(FILE *out_fp, SearchSoldOutProduct *, SellHistory *, vector<Product *>);
 	vector<Product *> doSearchSoldOutProduct(SearchSoldOutProduct *, SellHistory *, vector<Product *>);
 };

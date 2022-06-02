@@ -13,7 +13,7 @@ void SearchSoldOutProduct::startInterface(FILE *out_fp, SellHistory *sellProduct
 
 vector<Product *> SearchSoldOutProduct::showSoldOutProductList(SellHistory *sellHistory, vector<Product *> productList)
 {
-    vector<Product *> soldOutProductListPointer; // push_back 작업 필요
+    vector<Product *> soldOutProductListPointer;
     
     vector<Product *> sellProductList = sellHistory->listProducts();
     for(auto& itr : sellProductList)

@@ -6,6 +6,6 @@ class AddProduct
 {
 public:
 	AddProduct();
-	void startInterface(FILE *in_fp, FILE *out_fp, SellHistory *sellhistory, vector<Product *>);
-	void showAddProduct(string productName, string companyName, int price, int count, SellHistory *sellhistory, vector<Product *>);
+	void startInterface(FILE *, FILE *p, SellHistory *, vector<Product *>);
+	void showAddProduct(string, string, int, int, SellHistory *, vector<Product *>);
 };
