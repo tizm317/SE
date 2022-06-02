@@ -62,39 +62,39 @@ void doTask()
         {
             switch (menu_level_2)
             {
-            case 1:
-            {
-                // 4.1 상품 정보 검색
-                printf("4.1 상품 정보 검색\n");
-                //SearchProduct searchProduct(in_fp, out_fp, productList);
-                SearchProduct searchProduct;
-                selectedProduct = searchProduct.startInterface(in_fp, out_fp, productList);
-                break;
-            }
-            case 2:
-            {
-                // 4.2. 상품 구매
-                printf("4.2. 상품 구매\n");
-                PurchaseProduct purchaseProduct;
-                purchaseProduct.startInterface(out_fp , &purchaseHistory, selectedProduct);
-                break;
-            }
-            case 3:
-            {
-                //4.3. 상품 구매 내역 조회
-                printf("4.3. 상품 구매 내역 조회\n");
-                PurchaseHistoryInquiry* purchaseHistoryInquiry = new PurchaseHistoryInquiry(); // 동적으로..
-                purchaseHistoryInquiry->startInterface(in_fp, out_fp, &purchaseHistory); 
-                // 컨트롤 -> 바운더리(여기서 걍 출력 끝..)
-                break;
-            }
-            case 4:
-            {
-                // 4.4. 상품 구매만족도 평가
-                printf("4.4. 상품 구매만족도 평가\n");
-                PurchaseSatisfactionEvaluation* purchaseSatisfactionEvaluation = new PurchaseSatisfactionEvaluation();
-                purchaseSatisfactionEvaluation->startInterface(in_fp, out_fp, &purchaseHistory);
-            }
+                case 1:
+                {
+                    // 4.1 상품 정보 검색
+                    printf("4.1 상품 정보 검색\n");
+                    //SearchProduct searchProduct(in_fp, out_fp, productList);
+                    SearchProduct searchProduct;
+                    selectedProduct = searchProduct.startInterface(in_fp, out_fp, productList);
+                    break;
+                }
+                case 2:
+                {
+                    // 4.2. 상품 구매
+                    printf("4.2. 상품 구매\n");
+                    PurchaseProduct purchaseProduct;
+                    purchaseProduct.startInterface(out_fp , &purchaseHistory, selectedProduct);
+                    break;
+                }
+                case 3:
+                {
+                    //4.3. 상품 구매 내역 조회
+                    printf("4.3. 상품 구매 내역 조회\n");
+                    PurchaseHistoryInquiry* purchaseHistoryInquiry = new PurchaseHistoryInquiry(); // 동적으로..
+                    purchaseHistoryInquiry->startInterface(in_fp, out_fp, &purchaseHistory); 
+                    // 컨트롤 -> 바운더리(여기서 걍 출력 끝..)
+                    break;
+                }
+                case 4:
+                {
+                    // 4.4. 상품 구매만족도 평가
+                    printf("4.4. 상품 구매만족도 평가\n");
+                    PurchaseSatisfactionEvaluation* purchaseSatisfactionEvaluation = new PurchaseSatisfactionEvaluation();
+                    purchaseSatisfactionEvaluation->startInterface(in_fp, out_fp, &purchaseHistory);
+                }
             }
             break;
         }
