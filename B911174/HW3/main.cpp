@@ -7,11 +7,15 @@
 #include <vector>
 #include <stdio.h>
 #include <string.h>
+#include "UserDB.h"
 #include "Join.h"
 #include "JoinUI.h"
-#include "UserDB.h"
+#include "Withdrawal.h"
+#include "WithdrawalUI.h"
 #include "Login.h"
 #include "LoginUI.h"
+#include "Logout.h"
+#include "LogoutUI.h"
 using namespace std;
 
 // 상수 선언
@@ -28,51 +32,6 @@ void doTask();
 // 변수 선언
 FILE *in_fp, *out_fp;
 //string loginID= " ";
-
-
-
-class WithdrawalUI {
-public:
-    WithdrawalUI(FILE * in_fp) //생성자
-    {
-        //파일읽어
-        //char ID[MAX_STRING], password[MAX_STRING];
-        //fscanf(in_fp, "%s %s", ID, password);
-        fprintf(out_fp, "1.2. 회원탈퇴\n");
-        //fprintf(out_fp, "> %s %s\n", ID, password);
-        //cout << ID << password << endl;
-    }
-};
-class Withdrawal {
-public:
-    Withdrawal(FILE* in_fp) //생성자
-    {
-        //여기서 boundary class를 만들어 -> 생성자 호출돼
-        WithdrawalUI boundaryClass_Withdrawal = WithdrawalUI(in_fp);
-    }
-};
-
-class LogoutUI {
-public:
-    LogoutUI(FILE * in_fp) //생성자
-    {
-        //파일읽어
-        //char ID[MAX_STRING], password[MAX_STRING];
-        //fscanf(in_fp, "%s %s", ID, password);
-        fprintf(out_fp, "2.2. 로그아웃\n");
-        //fprintf(out_fp, "> %s \n", loginID);
-        //fprintf(out_fp, "> %s %s\n", loginID, password);
-        //cout << ID << password << endl;
-    }
-};
-class Logout {
-public:
-    Logout(FILE* in_fp) //생성자
-    {
-        //여기서 boundary class를 만들어 -> 생성자 호출돼
-        LogoutUI boundaryClass_Logout = LogoutUI(in_fp);
-    }
-};
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////main함수
 int main(void)
@@ -94,6 +53,7 @@ void doTask()
     int menu_level_2 = 0;
 
     //vector<UserDB*> userList;
+    //UserDB userDB;
 
     while (true)
     {
@@ -114,7 +74,7 @@ void doTask()
             {
                 //fprintf(out_fp, "1.2. 회원탈퇴\n");
                 //control class를 만들어야함 -> 생성자 호출돼
-                Withdrawal controlClass_Withdrawal = Withdrawal(in_fp);
+                Withdrawal controlClass_Withdrawal = Withdrawal(in_fp, out_fp);
                 //withdrawal();
             }
         }
@@ -131,7 +91,7 @@ void doTask()
             {
                 //fprintf(out_fp, "2.2. 로그아웃\n");
                 //control class를 만들어야함 -> 생성자 호출돼
-                Logout controlClass_Logout = Logout(in_fp);
+                Logout controlClass_Logout = Logout(in_fp, out_fp);
                 //logout();
             }
         }

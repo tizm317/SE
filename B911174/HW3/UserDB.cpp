@@ -5,7 +5,7 @@ using namespace std;
 
 UserDB::UserDB()
 {
-
+    
 }
 void UserDB::CreateNewAccount(string name, string SSN, string ID, string PW)
 {
@@ -14,7 +14,7 @@ void UserDB::CreateNewAccount(string name, string SSN, string ID, string PW)
     this->userSSN = stoi(SSN);
     this->userID = ID;
     this->userPW = PW;
-    cout << userName << " " << userSSN << " "  << userID << " " << userPW << endl;
+    //cout << userName << " " << userSSN << " "  << userID << " " << userPW << endl;
 }
 
 void UserDB::DeleteUserInfo()

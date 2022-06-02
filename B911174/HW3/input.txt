@@ -1,0 +1,9 @@
+1 1 lee 123456 mbc pwd1
+2 1 mbc pwd1
+1 2
+2 2
+1 1 park 987654 obs pwd2
+2 1 obs pwd2
+1 2
+2 2
+6 1
