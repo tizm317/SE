@@ -12,4 +12,3 @@ public:
 	vector<Product *> listProducts();
 	int getLength();
 };
-

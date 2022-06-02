@@ -54,6 +54,7 @@ void doTask()
     productList.push_back(&test4);
 
     SellHistory sellHistory;
+    PurchaseHistory purchaseHistory;
 
     while(!is_program_exit)
     {

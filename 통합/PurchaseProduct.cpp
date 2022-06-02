@@ -12,15 +12,15 @@ void PurchaseProduct::ShowPurchaseResult(PurchaseHistory* purchaseHistory, Produ
 	}
 
 
-	// ÀÌ¹Ì ±¸¸ÅÇÑ Àû ÀÖÀ¸¸é ±¸¸Å x
+	// ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ x
 	if (IsAlreadyPurchased)
 		return;
 
-	// ±¸¸Å
-	// °³¼ö ÇÏ³ª ÁÙÀÌ°í
-	selectedProduct->ReduceCount();
+	// ï¿½ï¿½ï¿½ï¿½
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½
+	selectedProduct->reduceCount();
 
-	// ±¸¸Å ¸ñ·Ï¿¡ Ãß°¡
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï¿ï¿½ ï¿½ß°ï¿½
 	(*purchaseHistory).AddPurchaseHistory(selectedProduct);
 
 	return;

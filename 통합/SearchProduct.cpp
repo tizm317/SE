@@ -6,7 +6,7 @@ SearchProduct::SearchProduct()
 
 SearchProduct::SearchProduct(FILE* in_fp, FILE* out_fp, vector<Product*> productList)
 {
-	// ÄÁÆ®·ÑÅ¬·¡½º°¡ ¹Ù¿î´õ¸® ÁÖ¼Ò °¡Áü
+	// ï¿½ï¿½Æ®ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 	//*searchProductUIptr = 
 	SearchProductUI searchProductUI(in_fp, out_fp, this, productList);
 
@@ -27,9 +27,9 @@ Product* SearchProduct::ShowProductDetails(string ProductName, vector<Product*> 
 
 	for (auto& itr : productList)
 	{
-		if (ProductName == itr->GetProductName())
+		if (ProductName == itr->getProductName())
 		{
-			selectedProduct = itr->GetProductDetails();
+			selectedProduct = itr->getProductDetails();
 			return selectedProduct;
 		}
 	}

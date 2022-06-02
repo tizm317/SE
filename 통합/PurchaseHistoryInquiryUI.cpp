@@ -7,6 +7,6 @@ PurchaseHistoryInquiryUI::PurchaseHistoryInquiryUI(FILE* out_fp, PurchaseHistory
 	for (auto& itr : purchaseHistory->ListProducts())
 	{
 		//itr->GetProductDetails();
-		fprintf(out_fp, "\n%s %s %s %d %d %f", itr->GetSellerID().c_str(), itr->GetProductName().c_str(), itr->GetCompanyName().c_str(), itr->GetCost(), itr->GetCount(), itr->GetAvgPurchaseSatisfaction());
+		fprintf(out_fp, "\n%s %s %s %d %d %f", itr->getSellerID().c_str(), itr->getProductName().c_str(), itr->getCompanyName().c_str(), itr->getCost(), itr->getCount(), itr->getAvgPurchaseSatisfaction());
 	}
 }

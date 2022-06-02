@@ -10,11 +10,11 @@ Product* PurchaseSatisfactionEvaluation::SelectProduct(PurchaseHistory* purchase
 {
 	for (auto& itr : purchaseHistory->ListProducts())
 	{
-		string st1 = itr->GetProductName();
+		string st1 = itr->getProductName();
 		string st2 = ProductName;
 		if (st1.compare(st2) == 0)
 		{
-			itr->GetProductDetails();
+			itr->getProductDetails();
 			return itr;
 		}
 	}
@@ -25,13 +25,13 @@ Product* PurchaseSatisfactionEvaluation::SelectProduct(PurchaseHistory* purchase
 void PurchaseSatisfactionEvaluation::InputPurchaseSatisfactionScore(Product* selectedProduct, int PurchaseSatisfaction)
 {
 
-	//PurchaseSatisfaction = 0; // ÃÊ±âÈ­
+	//PurchaseSatisfaction = 0; // ï¿½Ê±ï¿½È­
 	if (PurchaseSatisfaction <= 0 || PurchaseSatisfaction > 5)
 		return;
 
-	// ±¸¸Å ¸¸Á·µµ º¯°æ
-	selectedProduct->ChangeAvgPurchaseSatisfaction(PurchaseSatisfaction);
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	selectedProduct->changeAvgPurchaseSatisfaction(PurchaseSatisfaction);
 
-	// Ãâ·Â (ÀüÃ¼ Ãâ·ÂÀÌ¶ó ¹Ù²ãÁà¾ßÇÔ)
+	// ï¿½ï¿½ï¿½ (ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 	//selectedProduct->GetProductDetails();
 }

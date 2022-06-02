@@ -8,24 +8,22 @@ SearchProductUI::SearchProductUI(FILE* in_fp, FILE* out_fp, SearchProduct* searc
 {
 	int temp = fscanf(in_fp, "%s", ProductName);
 
-	// ¹Ù¿î´õ¸®°¡ ÄÁÆ®·ÑÅ¬·¡½ºÀÇ Æ÷ÀÎÅÍ °¡Áü
+	// ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	this->searchProductptr = searchProductptr;
 
 
 	Product* ProductPointer = nullptr;
 
 	ProductPointer = this->InputProductName(productList);
-
-	//ProductPointer->GetProductDetails();
 	
-	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->GetSellerID().c_str(), ProductPointer->GetProductName().c_str(), ProductPointer->GetCompanyName().c_str(), ProductPointer->GetCost(), ProductPointer->GetCount(), ProductPointer->GetAvgPurchaseSatisfaction());
+	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
 }
 
 Product* SearchProductUI::startInterface(FILE* in_fp, FILE* out_fp, SearchProduct* searchProductptr, vector<Product*> productList)
 {
 	int temp = fscanf(in_fp, "%s", ProductName);
 
-	// ¹Ù¿î´õ¸®°¡ ÄÁÆ®·ÑÅ¬·¡½ºÀÇ Æ÷ÀÎÅÍ °¡Áü
+	// ï¿½Ù¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	this->searchProductptr = searchProductptr;
 
 
@@ -35,7 +33,7 @@ Product* SearchProductUI::startInterface(FILE* in_fp, FILE* out_fp, SearchProduc
 
 	//ProductPointer->GetProductDetails();
 
-	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->GetSellerID().c_str(), ProductPointer->GetProductName().c_str(), ProductPointer->GetCompanyName().c_str(), ProductPointer->GetCost(), ProductPointer->GetCount(), ProductPointer->GetAvgPurchaseSatisfaction());
+	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
 
 
 	return ProductPointer;

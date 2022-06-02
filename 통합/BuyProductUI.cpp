@@ -5,6 +5,6 @@ void BuyProductUI::ClickPurchaseButton(FILE* out_fp, PurchaseHistory* purchaseHi
 	PurchaseProduct purchaseProduct;
 	purchaseProduct.ShowPurchaseResult(purchaseHistory, selectedProduct);
 
-	int temp = fprintf(out_fp, "\n%s %s", selectedProduct->GetSellerID().c_str(), selectedProduct->GetProductName().c_str());
+	int temp = fprintf(out_fp, "\n%s %s", selectedProduct->getSellerID().c_str(), selectedProduct->getProductName().c_str());
 }
 

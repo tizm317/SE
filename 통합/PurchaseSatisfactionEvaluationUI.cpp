@@ -2,25 +2,25 @@
 
 PurchaseSatisfactionEvaluationUI::PurchaseSatisfactionEvaluationUI(FILE* in_fp, FILE* out_fp, PurchaseHistory* purchaseHistory, PurchaseSatisfactionEvaluation* callerPtr)
 {
-	// »óÇ°ÀÌ¸§ ÀÔ·Â ¹ÞÀ½
+	// ï¿½ï¿½Ç°ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½
 	int temp = fscanf(in_fp, "%s", ProductName);
 
-	// ±¸¸Å ³»¿ª Áß¿¡¼­ ÇØ´ç »óÇ° Ã£À½
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¿ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½Ç° Ã£ï¿½ï¿½
 	Product* ProductPointer = nullptr;
-	// ¸®ÅÏÀ¸·Î ³Ñ°Ü ¹ÞÀ½
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ ï¿½ï¿½ï¿½ï¿½
 	ProductPointer = callerPtr->SelectProduct(purchaseHistory, ProductName);
 
-	// ±¸¸Å ¸¸Á·µµ ÀÔ·Â ¹ÞÀ½
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½
 	temp = fscanf(in_fp, "%d", &PurchaseSatisfaction);
 
 
 	//ProductPointer = callerPtr->SelectProduct(purchaseHistory, ProductName); 
 	
-	// ±¸¸Å ¸¸Á·µµ¸¦ ÇØ´ç »óÇ°¿¡ ³ÖÀ½
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	callerPtr->InputPurchaseSatisfactionScore(ProductPointer, PurchaseSatisfaction);
 
-	// output.txt¿¡ Ãâ·Â
-	fprintf(out_fp, "\n%s %s, %f", ProductPointer->GetSellerID().c_str(), ProductPointer->GetProductName().c_str(), ProductPointer->GetAvgPurchaseSatisfaction());
+	// output.txtï¿½ï¿½ ï¿½ï¿½ï¿½
+	fprintf(out_fp, "\n%s %s, %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getAvgPurchaseSatisfaction());
 }
 
 
