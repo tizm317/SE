@@ -1,0 +1,68 @@
+1.1. È¸¿ø°¡ÀÔ
+> lee 123456 mbc pwd1
+
+2.1. ·Î±×ÀÎ
+> mbc pwd1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat chulsoo 2000 3
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> shirts jambang 3000 3
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> ballcap polo 2550 3
+
+3.2. ?±ë¡ ?í’ˆ ì¡°íšŒ
+> hat chulsoo 2000 3
+> shirts jambang 3000 3
+> ballcap polo 2550 3
+
+2.2. ·Î±×¾Æ¿ô
+
+1.1. È¸¿ø°¡ÀÔ
+> park 987654 obs pwd2
+
+2.1. ·Î±×ÀÎ
+> obs pwd2
+
+4.1. Search Product
+> mbc shirts jambang 3000 3 0.000000
+
+4.2. Buy Product
+> mbc shirts
+
+4.1. Search Product
+> mbc ballcap polo 2550 3 0.000000
+
+4.2. Buy Product
+> mbc ballcap
+
+4.1. Search Product
+> mbc ballcap polo 2550 2 0.000000
+
+4.2. Buy Product
+> mbc ballcap
+
+4.3. ÇÑ±ÛÅ×½ºÆ®
+> mbc shirts jambang 3000 2 0.0
+> mbc ballcap polo 2550 1 0.0
+> mbc ballcap polo 2550 1 0.0
+
+4.4. Purchase Satisfaction Evaluation
+> mbc shirts 0
+
+4.4. Purchase Satisfaction Evaluation
+> mbc ballcap 0
+
+4.4. Purchase Satisfaction Evaluation
+> mbc ballcap 0
+
+3.3. ?ë§¤ ?„ë£Œ ?í’ˆ ì¡°íšŒ
+
+5.1. ?ë§¤ ?í’ˆ ?µê³„
+> hat 0 0.0
+> shirts 3000 3.0
+> ballcap 5100 2.0
+
+6.1. ì¢…ë£Œ

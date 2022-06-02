@@ -1,0 +1,23 @@
+1 1 lee 123456 mbc pwd1
+2 1 mbc pwd1
+3 1 hat chulsoo 2000 3 
+3 1 shirts jambang 3000 3
+3 1 ballcap polo 2550 3
+3 2 
+2 2
+1 1 park 987654 obs pwd2
+2 1 obs pwd2
+4 1 shirts 
+4 2
+4 1 ballcap
+4 2
+4 1 ballcap
+4 2
+4 3
+4 4 shirts 3
+4 4 ballcap 3
+4 4 ballcap 4
+3 3
+5 1
+2 2
+6 1
