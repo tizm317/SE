@@ -1,0 +1,41 @@
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat chulsoo 2000 1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat1 chulsoo1 2000 1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat2 chulsoo2 2000 1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat3 chulsoo3 2000 1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat4 chulsoo4 2000 1
+
+3.1. ?ë§¤ ?˜ë¥˜ ?±ë¡
+> hat5 chulsoo5 2000 1
+
+3.2. ?±ë¡ ?í’ˆ ì¡°íšŒ
+> hat chulsoo 2000 1
+> hat1 chulsoo1 2000 1
+> hat2 chulsoo2 2000 1
+> hat3 chulsoo3 2000 1
+> hat4 chulsoo4 2000 1
+> hat5 chulsoo5 2000 1
+
+4.1. Search Product
+> test hat chulsoo 2000 1 0.000000
+4.2. Buy Product
+> test hat
+4.1. Search Product
+> test hat3 chulsoo3 2000 1 0.000000
+4.2. Buy Product
+> test hat3
+4.3. Purchase History Inquiry
+> test hat chulsoo 2000 0 0.000000
+> test hat3 chulsoo3 2000 0 0.000000
+4.4 Purchase Satisfaction Evaluation
+> test hat 3.000000
+4.4 Purchase Satisfaction Evaluation
+> test hat3 1.000000

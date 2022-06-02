@@ -12,6 +12,7 @@ void SearchSellProductUI::startInterface(FILE* out_fp, SearchSellProduct *search
 
 	sellProductPointerList = this->doSearchSellProduct(searchSellProductPointer, sellProductList, productList);
 
+
 	fprintf(out_fp, "3.2. 등록 상품 조회\n");
     for(auto &itr : sellProductPointerList)
     {

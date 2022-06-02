@@ -33,7 +33,8 @@ Product* SearchProductUI::startInterface(FILE* in_fp, FILE* out_fp, SearchProduc
 
 	//ProductPointer->GetProductDetails();
 
-	fprintf(out_fp, "%s %s %s %d %d %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
+	fprintf(out_fp, "4.1. Search Product\n");
+	fprintf(out_fp, "> %s %s %s %d %d %f\n", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getCompanyName().c_str(), ProductPointer->getCost(), ProductPointer->getCount(), ProductPointer->getAvgPurchaseSatisfaction());
 
 
 	return ProductPointer;

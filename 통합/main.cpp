@@ -6,6 +6,8 @@
 #include "PurchaseSatisfactionEvaluation.h"
 #include "SearchProduct.h"
 #include "PurchaseProduct.h"
+#include <Windows.h>
+
 using namespace std;
 
 // 상수 선언
@@ -22,9 +24,17 @@ void program_exit();
 FILE *in_fp, *out_fp;
 Product* selectedProduct;
 
+
 int main()
 {
     // 파일 입출력을 위한 초기화
+
+  /*  const UINT default_cp = GetConsoleOutputCP();
+    cout << default_cp << endl;
+
+    SetConsoleOutputCP(CP_UTF8);*/
+
+
     in_fp = fopen(INPUT_FILE_NAME, "r+");
     out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 
@@ -77,6 +87,7 @@ void doTask()
                         break;
                     }
                 }
+                break;
             }
             case 2:
             {
@@ -91,6 +102,7 @@ void doTask()
                         break;
                     }
                 }
+                break;
             }
             case 3:
             {
@@ -118,6 +130,7 @@ void doTask()
                         return ;
                     }
                 }
+                break;
             }
             case 4:
             {
@@ -126,15 +139,15 @@ void doTask()
                     case 1:
                     {
                         // 4.1 상품 정보 검색
-                        printf("4.1 상품 정보 검색\n");
+                        //printf("4.1 상품 정보 검색\n");
                         SearchProduct searchProduct;
-                        selectedProduct = searchProduct.startInterface(in_fp, out_fp, productList);
+                        selectedProduct = searchProduct.startInterface(in_fp, out_fp, sellHistory.listProducts());
                         break;
                     }
                     case 2:
                     {
                         // 4.2. 상품 구매
-                        printf("4.2. 상품 구매\n");
+                        //printf("4.2. 상품 구매\n");
                         PurchaseProduct purchaseProduct;
                         purchaseProduct.startInterface(out_fp , &purchaseHistory, selectedProduct);
                         break;
@@ -142,7 +155,8 @@ void doTask()
                     case 3:
                     {
                         //4.3. 상품 구매 내역 조회
-                        printf("4.3. 상품 구매 내역 조회\n");
+                        //SetConsoleOutputCP(CP_UTF8);
+                        //printf("4.3. 상품 구매 내역 조회\n");
                         PurchaseHistoryInquiry* purchaseHistoryInquiry = new PurchaseHistoryInquiry(); // 동적으로..
                         purchaseHistoryInquiry->startInterface(in_fp, out_fp, &purchaseHistory); 
                         // 컨트롤 -> 바운더리(여기서 걍 출력 끝..)
@@ -151,24 +165,25 @@ void doTask()
                     case 4:
                     {
                         // 4.4. 상품 구매만족도 평가
-                        printf("4.4. 상품 구매만족도 평가\n");
+                        //printf("4.4. 상품 구매만족도 평가\n");
                         PurchaseSatisfactionEvaluation* purchaseSatisfactionEvaluation = new PurchaseSatisfactionEvaluation();
                         purchaseSatisfactionEvaluation->startInterface(in_fp, out_fp, &purchaseHistory);
                     }
                 }
+                break;
             }
-            // case 6:
-            // {
-            //     switch(menu_level_2)
-            //     {
-            //         case 1: // "6.1. 종료“ 메뉴 부분
-            //         {
-            //             program_exit();
-            //             is_program_exit = 1;
-            //             break;;
-            //         }
-            //     }
-            // }
+             case 6:
+             {
+                 switch(menu_level_2)
+                 {
+                     case 1: // "6.1. 종료“ 메뉴 부분
+                     {
+                         program_exit();
+                         is_program_exit = 1;
+                         break;
+                     }
+                 }
+             }
         }
     }
     return;

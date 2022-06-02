@@ -20,7 +20,8 @@ PurchaseSatisfactionEvaluationUI::PurchaseSatisfactionEvaluationUI(FILE* in_fp, 
 	callerPtr->InputPurchaseSatisfactionScore(ProductPointer, PurchaseSatisfaction);
 
 	// output.txt�� ���
-	fprintf(out_fp, "\n%s %s, %f", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getAvgPurchaseSatisfaction());
+	fprintf(out_fp, "4.4. Purchase Satisfaction Evaluation\n");
+	fprintf(out_fp, "> %s %s %f\n", ProductPointer->getSellerID().c_str(), ProductPointer->getProductName().c_str(), ProductPointer->getAvgPurchaseSatisfaction());
 }
 
 
