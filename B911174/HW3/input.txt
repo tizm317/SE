@@ -1,3 +1,0 @@
-1 1 lee 123456 mbc pwd1
-2 1 mbc pwd1
-6 1

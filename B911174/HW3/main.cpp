@@ -7,9 +7,11 @@
 #include <vector>
 #include <stdio.h>
 #include <string.h>
-//#include "Join.h"
-//#include "JoinUI.h"
+#include "Join.h"
+#include "JoinUI.h"
 #include "UserDB.h"
+#include "Login.h"
+#include "LoginUI.h"
 using namespace std;
 
 // 상수 선언
@@ -25,93 +27,19 @@ void doTask();
 
 // 변수 선언
 FILE *in_fp, *out_fp;
+//string loginID= " ";
 
-class Join;
 
-//class JoinUI
-class JoinUI {
-public:
-    JoinUI(FILE* in_fp, FILE* out_fp) //생성자
-    {
-        //파일읽어
-        char name[MAX_STRING], SSN[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
-        fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
-        //파일에 바로 쓸 수 있음
-        fprintf(out_fp, "1.1. 회원가입\n");
-        fprintf(out_fp, "> %s %s %s %s\n", name, SSN, ID, password);
-        //다시 controlclass의 한 함수 호출해
-        //Join* control;
-        //control->sendEntity(name, SSN, ID, password);
-        //cout << name << SSN << ID << password << endl;
-    }
-    void ReadFile() //파일읽어들여
-    {
-        //다시 control클래스의 함수호출
-        //ControlClass_Join* controller = new ControlClass_Join();
-        //controller->sendEntity();
-        //파일 입출력
-
-    }
-    void WriteFile() //파일에 써
-    {
-        //cout << "회원가입쓰기완료" << endl;
-        //writeFile << "1.1. 회원가입" << endl;
-        //writeFile << "> " << userName << " " << userRRN << " " << userID << " " << userPW << endl;
-        //writeFile << userName << " " << userRRN << " " << userID << " " << userPW << endl;
-    }
-};
-//class Join
-class Join {
-public:
-    Join()
-    {
-
-    }
-    Join(FILE* in_fp, FILE* out_fp) //생성자
-    {
-        //여기서 boundary class를 만들어 -> 생성자 호출돼
-        JoinUI boundaryClass_Join = JoinUI(in_fp, out_fp);
-        //boundary한테 읽어달라고 해
-        //boundaryClass_Join->ReadFile();
-    }
-    void sendEntity(string name, string SSN, string ID, string PW) //Entity에 전달
-    {
-        UserDB userDB;
-        userDB.CreateNewAccount(name, SSN, ID, PW);
-    }
-};
-
-class LoginUI {
-public:
-    LoginUI(FILE* in_fp) //생성자
-    {
-        //파일읽어
-        char ID[MAX_STRING], password[MAX_STRING];
-        fscanf(in_fp, "%s %s", ID, password);
-        //파일에 바로 쓸 수 있음
-        fprintf(out_fp, "2.1. 로그인\n");
-        fprintf(out_fp, "> %s %s\n", ID, password);
-        //cout << ID << password << endl;
-    }
-};
-class Login {
-public:
-    Login(FILE* in_fp) //생성자
-    {
-        //여기서 boundary class를 만들어 -> 생성자 호출돼
-        LoginUI boundaryClass_Login = LoginUI(in_fp);
-    }
-};
 
 class WithdrawalUI {
 public:
     WithdrawalUI(FILE * in_fp) //생성자
     {
         //파일읽어
-        char ID[MAX_STRING], password[MAX_STRING];
-        fscanf(in_fp, "%s %s", ID, password);
-        fprintf(out_fp, "2.1. 로그인\n");
-        fprintf(out_fp, "> %s %s\n", ID, password);
+        //char ID[MAX_STRING], password[MAX_STRING];
+        //fscanf(in_fp, "%s %s", ID, password);
+        fprintf(out_fp, "1.2. 회원탈퇴\n");
+        //fprintf(out_fp, "> %s %s\n", ID, password);
         //cout << ID << password << endl;
     }
 };
@@ -129,10 +57,11 @@ public:
     LogoutUI(FILE * in_fp) //생성자
     {
         //파일읽어
-        char ID[MAX_STRING], password[MAX_STRING];
-        fscanf(in_fp, "%s %s", ID, password);
-        fprintf(out_fp, "2.1. 로그인\n");
-        fprintf(out_fp, "> %s %s\n", ID, password);
+        //char ID[MAX_STRING], password[MAX_STRING];
+        //fscanf(in_fp, "%s %s", ID, password);
+        fprintf(out_fp, "2.2. 로그아웃\n");
+        //fprintf(out_fp, "> %s \n", loginID);
+        //fprintf(out_fp, "> %s %s\n", loginID, password);
         //cout << ID << password << endl;
     }
 };
@@ -195,7 +124,7 @@ void doTask()
             {
                 //fprintf(out_fp, "2.1. 로그인\n");
                 //control class를 만들어야함 -> 생성자 호출돼
-                Login controlClass_Login = Login(in_fp);
+                Login controlClass_Login = Login(in_fp, out_fp);
                 //login();
             }
             else if (menu_level_2 == 2)
