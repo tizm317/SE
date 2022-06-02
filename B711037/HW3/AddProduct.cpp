@@ -18,6 +18,6 @@ void AddProduct::showAddProduct(string productName, string companyName, int pric
     Product *newProduct = new Product(productName, companyName, price, count);
     productList.push_back(newProduct); // sellHistory에서 정보 받아오므로 productList에 push_back안해도 정상 파일 출력됨
 
-    // 2. AddSellHistory
-    sellHistory->AddSellHistory(newProduct); // 따라서, 이 코드가 실행 안되면 3-2에서 상품 조회 불가능함
+    // 2. addSellHistory
+    sellHistory->addSellHistory(newProduct); // 따라서, 이 코드가 실행 안되면 3-2에서 상품 조회 불가능함
 }

@@ -15,7 +15,7 @@ void SearchSellProductUI::startInterface(FILE* out_fp, SearchSellProduct *search
 	fprintf(out_fp, "3.2. 등록 상품 조회\n");
     for(auto &itr : sellProductPointerList)
     {
-		fprintf(out_fp, "> %s %s %d %d\n", itr->GetProductName().c_str(), itr->GetCompanyName().c_str(), itr->GetCost(), itr->GetCount());
+		fprintf(out_fp, "> %s %s %d %d\n", itr->getProductName().c_str(), itr->getCompanyName().c_str(), itr->getCost(), itr->getCount());
     }
 	fprintf(out_fp, "\n");
 }
@@ -24,7 +24,7 @@ vector<Product *> SearchSellProductUI::doSearchSellProduct(SearchSellProduct *se
 {
 	vector<Product *> sellProductPointerList;
 
-	sellProductPointerList = this->searchSellProductPointer->ShowSellProductList(sellProductList, productList); // boundary에서 control의 함수 호출
+	sellProductPointerList = this->searchSellProductPointer->showSellProductList(sellProductList, productList);
 	
-	return sellProductPointerList; // 연쇄호출로 getDetail한 product배열을 리턴함
+	return sellProductPointerList;
 }

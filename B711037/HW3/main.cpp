@@ -49,34 +49,34 @@ void doTask()
         // 메뉴 구분 및 해당 연산 수행
         switch(menu_level_1)
         {
-            // case 1:
-            // {
-            //     switch(menu_level_2)
-            //     {
-            //         case 1: // "1.1. 회원가입“ 메뉴 부분
-            //         {
-            //             break;
-            //         }
-            //         case 2:
-            //         {
-            //             break;
-            //         }
-            //     }
-            // }
-            // case 2:
-            // {
-            //     switch(menu_level_2)
-            //     {
-            //         case 1:
-            //         {
-            //             break;
-            //         }
-            //         case 2:
-            //         {
-            //             break;
-            //         }
-            //     }
-            // }
+            case 1:
+            {
+                switch(menu_level_2)
+                {
+                    case 1: // "1.1. 회원가입“ 메뉴 부분
+                    {
+                        break;
+                    }
+                    case 2:
+                    {
+                        break;
+                    }
+                }
+            }
+            case 2:
+            {
+                switch(menu_level_2)
+                {
+                    case 1:
+                    {
+                        break;
+                    }
+                    case 2:
+                    {
+                        break;
+                    }
+                }
+            }
             case 3:
             {
                 switch(menu_level_2)
@@ -93,26 +93,26 @@ void doTask()
                         // 3.2 등록 상품 조회
                         SearchSellProduct controlPointer;
                         controlPointer.startInterface(out_fp, &sellHistory, productList);
-                        return ;
+                        break;
                     }
                     case 3:
                     {
-                        break;
+                        // 3.3 판매 완료 상품 조회
                     }
                 }
             }
-            // case 6:
-            // {
-            //     switch(menu_level_2)
-            //     {
-            //         case 1: // "6.1. 종료“ 메뉴 부분
-            //         {
-            //             program_exit();
-            //             is_program_exit = 1;
-            //             break;;
-            //         }
-            //     }
-            // }
+            case 6:
+            {
+                switch(menu_level_2)
+                {
+                    case 1: // "6.1. 종료“ 메뉴 부분
+                    {
+                        program_exit();
+                        is_program_exit = 1;
+                        break;;
+                    }
+                }
+            }
         }
     }
     return;

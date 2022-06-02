@@ -5,17 +5,17 @@ SellHistory::SellHistory()
 {
 }
 
-void SellHistory::AddSellHistory(Product *selectedProduct)
+void SellHistory::addSellHistory(Product *selectedProduct)
 {
 	productList.push_back(selectedProduct);
 }
 
-vector<Product *> SellHistory::ListProducts()
+vector<Product *> SellHistory::listProducts()
 {
 	return this->productList;
 }
 
-int SellHistory::get_length()
+int SellHistory::getLength()
 {
 	int count = 0;
 	for(auto& itr: this->productList)

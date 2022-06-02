@@ -5,27 +5,11 @@ Product::Product()
 {
 }
 
-// Product::Product(string name)
-// {
-// 	productName = name;
-// 	companyName = "testCompany";
-// 	cost = 1000;
-// 	count = 10;
-// 	sellCount = 0;
-// }
-
-Product* Product::GetProductDetails()
+Product* Product::getProductDetails()
 {
-	// cout << ProductName << '\n';
-	// cout << CompanyName << '\n';
-    // cout << cost << '\n';
-	// cout << count << '\n';
-    // cout << sellCount << '\n';
-
 	return this;
 }
 
-// this로 하니깐 정상 반영됨
 Product::Product(string productName, string companyName, int cost, int count)
 {
 	this->productName = productName;
@@ -35,22 +19,22 @@ Product::Product(string productName, string companyName, int cost, int count)
 }
 
 
-string Product::GetProductName()
+string Product::getProductName()
 {
 	return this->productName;
 }
 
-string Product::GetCompanyName()
+string Product::getCompanyName()
 {
 	return this->companyName;
 }
 
-int Product::GetCost()
+int Product::getCost()
 {
 	return this->cost;
 }
 
-int Product::GetCount()
+int Product::getCount()
 {
 	return this->count;
 }
