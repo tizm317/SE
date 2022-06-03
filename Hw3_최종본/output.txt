@@ -1,0 +1,69 @@
+1.1. 회원가입
+> lee 123456 mbc pwd1
+
+2.1. 로그인
+> mbc pwd1
+
+3.1. 판매 의류 등록
+> hat chulsoo 2000 3
+
+3.1. 판매 의류 등록
+> shirts jambang 3000 3
+
+3.1. 판매 의류 등록
+> ballcap polo 2550 2
+
+3.2. 등록 상품 조회
+> hat chulsoo 2000 3
+> shirts jambang 3000 3
+> ballcap polo 2550 2
+
+2.2. 로그아웃
+
+1.1. 회원가입
+> park 987654 obs pwd2
+
+2.1. 로그인
+> obs pwd2
+
+4.1. 상품 정보 검색
+> mbc shirts jambang 3000 3 0.0
+
+4.2. 상품 구매
+> mbc shirts
+
+4.1. 상품 정보 검색
+> mbc ballcap polo 2550 2 0.0
+
+4.2. 상품 구매
+> mbc ballcap
+
+4.1. 상품 정보 검색
+> mbc ballcap polo 2550 1 0.0
+
+4.2. 상품 구매
+> mbc ballcap
+
+4.3. 상품 구매 내역 조회
+> mbc shirts jambang 3000 2 0.0
+> mbc ballcap polo 2550 0 0.0
+> mbc ballcap polo 2550 0 0.0
+
+4.4. 상품 구매만족도 평가
+> mbc shirts 3
+
+4.4. 상품 구매만족도 평가
+> mbc ballcap 3
+
+4.4. 상품 구매만족도 평가
+> mbc ballcap 4
+
+3.3. 판매 완료 상품 조회
+> ballcap polo 2550 2 3.5
+
+5.1. 판매 상품 통계
+> hat 0 0.0
+> shirts 3000 3.0
+> ballcap 5100 3.5
+
+6.1. 종료
